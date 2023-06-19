@@ -43,7 +43,7 @@ export function auth(req: NextRequest,skipCustomKey=true) {
   if(!skipCustomKey && accessCode === 'huihui510') {
     return {
       error: true,
-      msg: !accessCode ? "empty access code" : "wrong access code",
+      msg: "当前账号没有Midjouney绘图权限，请联系灰灰购买",
     };
   }
   if (serverConfig.needCode && !serverConfig.codes.has(hashedCode)) {
