@@ -39,7 +39,13 @@ export function auth(req: NextRequest,skipCustomKey=true) {
   console.log("[Auth] hashed access code:", hashedCode);
   console.log("[User IP] ", getIP(req));
   console.log("[Time] ", new Date().toLocaleString());
-
+  // 临时处理
+  if(!skipCustomKey && accessCode === 'huihui0510') {
+    return {
+      error: true,
+      msg: !accessCode ? "empty access code" : "wrong access code",
+    };
+  }
   if (serverConfig.needCode && !serverConfig.codes.has(hashedCode)) {
     if(!token || !skipCustomKey){
       return {
