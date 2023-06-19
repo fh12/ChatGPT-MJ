@@ -40,7 +40,7 @@ export function auth(req: NextRequest,skipCustomKey=true) {
   console.log("[User IP] ", getIP(req));
   console.log("[Time] ", new Date().toLocaleString());
   // 临时处理
-  if(!skipCustomKey && accessCode === 'huihui0510') {
+  if(!skipCustomKey && accessCode === 'huihui510') {
     return {
       error: true,
       msg: !accessCode ? "empty access code" : "wrong access code",
