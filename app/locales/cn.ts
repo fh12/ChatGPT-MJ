@@ -4,7 +4,7 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized:
-      "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。如果你还没有 OpenAI API Key, 可以点击此处https://longyi.info进行购买。5美元token约等于125万个汉字",
+      "访问密码不正确或为空，请前往[登录](/#/auth)页输入正确的访问密码，或者在[设置](/#/settings)页填入你自己的 OpenAI API Key。如果你还没有 OpenAI API Key, 可以点击此处 https://longyi.info 进行购买。5美元token约等于125万个汉字",
   },
   Auth: {
     Title: "需要密码",
