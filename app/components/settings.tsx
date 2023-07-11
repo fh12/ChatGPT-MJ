@@ -10,6 +10,7 @@ import ClearIcon from "../icons/clear.svg";
 import LoadingIcon from "../icons/three-dots.svg";
 import EditIcon from "../icons/edit.svg";
 import EyeIcon from "../icons/eye.svg";
+import NextImage from "next/image";
 import {
   Input,
   List,
@@ -330,6 +331,10 @@ export function Settings() {
             />
           </div>
         </div>
+      </div>
+      <div className="wechat">
+        <span>加我好友 请扫右边二维码</span>
+        <NextImage src="/qrcode.png" alt="My Image" width={256} height={256} />
       </div>
       <div className={styles["settings"]}>
         <List>
