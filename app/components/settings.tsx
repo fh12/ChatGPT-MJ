@@ -334,12 +334,7 @@ export function Settings() {
       </div>
       <div className="wechat">
         <span>加我好友 请扫右边二维码</span>
-        <img
-          src="http://199.115.228.159/qrcode.png"
-          alt="My Image"
-          width={256}
-          height={256}
-        />
+        <NextImage src="/qrcode.png" alt="My Image" width={256} height={256} />
       </div>
       <div className={styles["settings"]}>
         <List>
