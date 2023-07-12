@@ -6,7 +6,12 @@
 .avatar {
   cursor: pointer;
 }
-
+.qrcode {
+  right: 40px;
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
+}
 .edit-prompt-modal {
   display: flex;
   flex-direction: column;

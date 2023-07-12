@@ -13,10 +13,11 @@ export function Popover(props: {
   children: JSX.Element;
   content: JSX.Element;
   open?: boolean;
+  popclassName?: string;
   onClose?: () => void;
 }) {
   return (
-    <div className={styles.popover}>
+    <div className={props.popclassName || styles.popover}>
       {props.children}
       {props.open && (
         <div className={styles["popover-content"]}>

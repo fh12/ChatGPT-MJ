@@ -342,6 +342,7 @@ export function Settings() {
           <ListItem title="联系我，请扫右边的AI二维码" className="qr-box">
             <Popover
               onClose={() => setShowQrcodePick(false)}
+              popclassName={styles.qrcode}
               content={
                 <NextImage
                   src="/qrcode.png"
