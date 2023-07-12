@@ -213,6 +213,7 @@ function formatVersionDate(t: string) {
 
 export function Settings() {
   const navigate = useNavigate();
+  const [showQrcodePick, setShowQrcodePick] = useState(false);
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const config = useAppConfig();
   const updateConfig = config.update;
@@ -332,12 +333,29 @@ export function Settings() {
           </div>
         </div>
       </div>
-      <div className="wechat">
+      {/* <div className="wechat">
         <span>加我好友 请扫右边二维码</span>
         <NextImage src="/qrcode.png" alt="My Image" width={256} height={256} />
-      </div>
+      </div> */}
       <div className={styles["settings"]}>
         <List>
+          <ListItem title="联系我，请扫右边的AI二维码" className="qr-box">
+            <Popover
+              onClose={() => setShowQrcodePick(false)}
+              content={
+                <NextImage
+                  src="/qrcode.png"
+                  alt="My Image"
+                  width={256}
+                  height={256}
+                />
+              }
+              open={showQrcodePick}
+            >
+              <div onClick={() => setShowQrcodePick(true)}>点我显示二维码</div>
+            </Popover>
+          </ListItem>
+
           <ListItem title={Locale.Settings.Avatar}>
             <Popover
               onClose={() => setShowEmojiPicker(false)}
